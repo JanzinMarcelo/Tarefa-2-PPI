@@ -56,7 +56,7 @@ function processaCadastroUsuario(requisicao, resposta){
 }
 const app = express();
 
-app.use(path.join(cdw(paginas)));
+app.use(express.static(path.join(process.cwd(), 'páginas')));
 
 app.get('/',(requisicao,resposta)=>{
     resposta.end(`
